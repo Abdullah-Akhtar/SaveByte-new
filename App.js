@@ -1,16 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, Image, StyleSheet,Platform, Text, View } from 'react-native';
+import Charity from './app/screens/Charityanddetails/Charity';
 import FoodList from './app/screens/foodlist/FoodList'
 import LoginScreen from './app/screens/loginScreen/LoginScreen';
 import RegisterSignUp from './app/screens/RegisterScreen/RegisterSignUp';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import CharityDetails from './app/screens/Charityanddetails/CharityDetails';
+// import CharityDetails from './app/screens/Charityanddetails/CharityDetails'
+const Stack = createNativeStackNavigator();
 export default function App() {
   return (
-    <View  style={styles.container}>
 
-    
-      <RegisterSignUp/>
+    <NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen name="Charity" component={Charity} />
+      <Stack.Screen name="CharityDetails" component={CharityDetails} />
 
-    </View>
+    </Stack.Navigator>
+  </NavigationContainer>
   );
 }
 

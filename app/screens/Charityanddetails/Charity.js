@@ -9,8 +9,10 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
-import FastImage from 'react-native-fast-image';
+
 import style from './style';
+
+
 
 const Charity = ({navigation}) => {
 
@@ -18,8 +20,8 @@ const Charity = ({navigation}) => {
   const list = [
     {
       id: 1,
-      title: 'Johnson',
-      subTitle: 'Hi! I am a charity',
+      title: 'Muhammad Saqib',
+      subTitle: 'Hello! I need a charity',
       requirement:
         'I want 500 Rupees and some food to eat because i am in need of food i need to donate food to the needy people among the people who are in need of food',
 
@@ -29,8 +31,8 @@ const Charity = ({navigation}) => {
     },
     {
       id: 2,
-      title: 'Harry Samit',
-      subTitle: 'Hi! I am a charity',
+      title: 'Abdullah Akhtar',
+      subTitle: 'Hi! I need a charity',
       requirement:
         'I want 500 Rupees and some food to eat because i am in need of food i need to donate food to the needy people among the people who are in need of food',
 
@@ -40,8 +42,8 @@ const Charity = ({navigation}) => {
     },
     {
       id: 3,
-      title: 'Hamza Rajput',
-      subTitle: 'Hi! I am a charity',
+      title: 'Asharib Ahmad',
+      subTitle: 'Hi! I need a charity',
       number: '+1 (917) 585-3258',
       requirement:
         'I want 500 Rupees and some food to eat because i am in need of food i need to donate food to the needy people among the people who are in need of food',
@@ -51,8 +53,8 @@ const Charity = ({navigation}) => {
     },
     {
       id: 4,
-      title: 'John Walton',
-      subTitle: 'Hi! I am a charity',
+      title: 'Talha Ahmad',
+      subTitle: 'Hi! I need a charity',
       requirement:
         'I want 500 Rupees and some food to eat because i am in need of food i need to donate food to the needy people among the people who are in need of food',
 
@@ -62,7 +64,7 @@ const Charity = ({navigation}) => {
     },
     {
       id: 5,
-      title: 'Merry An',
+      title: 'Faisal shahzad',
       subTitle: 'Hi! I am a charity',
       number: '+1 (917) 585-3258',
       requirement:
@@ -73,8 +75,8 @@ const Charity = ({navigation}) => {
     },
     {
       id: 6,
-      title: 'John Wick',
-      subTitle: 'Hi! I am a charity',
+      title: 'Hamza',
+      subTitle: 'Hi! I need a charity',
       number: '+1 (917) 585-3258',
       requirement:
         'I want 500 Rupees and some food to eat because i am in need of food i need to donate food to the needy people among the people who are in need of food',
@@ -85,7 +87,7 @@ const Charity = ({navigation}) => {
     {
       id: 7,
       title: 'Ali Ahmed',
-      subTitle: 'Hi! I am a charity',
+      subTitle: 'Hi! I need a charity',
       number: '+1 (917) 585-3258',
       requirement: 'I want 5000 Rupees and some food to eat ',
       img: require('../../assets/man2.jpg'),
@@ -94,7 +96,7 @@ const Charity = ({navigation}) => {
     {
       id: 8,
       title: 'Saqib Raza',
-      subTitle: 'Hi! I am a charity',
+      subTitle: 'Hi! I need a charity',
       number: '+1 (917) 585-3258',
       requirement: 'I want 11000 Rupees and some food to eat ',
       img: require('../../assets/man2.jpg'),
@@ -109,12 +111,13 @@ const Charity = ({navigation}) => {
         <TouchableOpacity
           activeOpacity={0.6}
           onPress={() => {
-            navigation.navigate('Details', {Item: item});
+            navigation.navigate('CharityDetails', {Item: item});
           }}
           style={style.parent}>
           <View style={style.child}>
-            <FastImage
-              resizeMode={FastImage.resizeMode.cover}
+            <Image
+              //resizeMode={FastImage.resizeMode.cover}
+              Use resizeMode='cover'
               source={item.img}
               style={style.profileImg}
             />

@@ -11,7 +11,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import style from './style';
 
-function Details({route, navigation}) {
+function CharityDetails({route, navigation}) {
   //ye sb list apni database se ain gi bs static rakhi hui inka use nahi ha
   const list = [
     {
@@ -74,7 +74,8 @@ function Details({route, navigation}) {
           style={[style.parent, {width: '90%'}]}>
           <View style={style.child}>
             <Image
-              resizeMode={Image.resizeMode.cover}
+              //resizeMode={Image.resizeMode.cover}
+              Use resizeMode='cover'
               source={item.img}
               style={style.profileImg}
             />
@@ -110,7 +111,8 @@ function Details({route, navigation}) {
             />
             <View style={style.subContainOne}>
               <Image
-                resizeMode={Image.resizeMode.cover}
+                //resizeMode={Image.resizeMode.cover}
+                Use resizeMode='cover'
                 source={Item.img}
                 style={style.profileTwoImg}
               />
@@ -169,4 +171,4 @@ function Details({route, navigation}) {
     </View>
   );
 }
-export default Details;
+export default CharityDetails;

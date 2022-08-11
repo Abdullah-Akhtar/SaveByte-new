@@ -29,7 +29,7 @@ export default StyleSheet.create({
   profileImg: {
     width: 55,
     height: 55,
-    borderTopLeftRadius: 55 / 2,
+    borderRadius: 55 / 2,
   },
   child: {
     marginTop: 10,

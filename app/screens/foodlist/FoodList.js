@@ -98,7 +98,8 @@ const FoodList = ({navigation}) => {
                   flex: 0.8,
                 }}>
                 <Image
-                  resizeMode={Image.resizeMode.cover}
+                  //resizeMode={Image.resizeMode.cover}
+                  Use resizeMode='cover' 
                   source={item.img}
                   style={styles.productImg}
                 />
