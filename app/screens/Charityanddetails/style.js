@@ -64,7 +64,7 @@ export default StyleSheet.create({
   profileTwoImg: {
     width: 120,
     height: 120,
-    borderTopLeftRadius: 120 / 2,
+    borderRadius: 120 / 2,
   },
   progressBarContain: {
     width: '70%',

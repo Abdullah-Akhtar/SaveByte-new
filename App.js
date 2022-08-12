@@ -16,7 +16,6 @@ export default function App() {
     <Stack.Navigator>
       <Stack.Screen name="Charity" component={Charity} />
       <Stack.Screen name="CharityDetails" component={CharityDetails} />
-
     </Stack.Navigator>
   </NavigationContainer>
   );
