@@ -7,17 +7,27 @@ import RegisterSignUp from './app/screens/RegisterScreen/RegisterSignUp';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import CharityDetails from './app/screens/Charityanddetails/CharityDetails';
+import FoodListUpload from './app/screens/foopost/FoodListUpload'
+
+import MapScreen from './app/screens/Location/MapScreen';
+import UserDetailpost from './app/screens/UserDetailPost/UserDetailpost';
 // import CharityDetails from './app/screens/Charityanddetails/CharityDetails'
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
 
-    <NavigationContainer>
-    <Stack.Navigator>
-      <Stack.Screen name="Charity" component={Charity} />
-      <Stack.Screen name="CharityDetails" component={CharityDetails} />
-    </Stack.Navigator>
-  </NavigationContainer>
+  //   <NavigationContainer>
+  //   <Stack.Navigator>
+  //     <Stack.Screen name="Charity" component={Charity} />
+  //     <Stack.Screen name="CharityDetails" component={CharityDetails} />
+  //   </Stack.Navigator>
+  // </NavigationContainer>
+  
+//<Details/>
+//  /<MapScreen/> 
+<FoodListUpload/>
+
+
   );
 }
 

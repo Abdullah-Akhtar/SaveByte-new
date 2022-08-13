@@ -6,7 +6,7 @@ import * as yup from 'yup';
 import AppFormFill from '../../component/AppFormFill';
 import SubmitButton from '../../component/SubmitButton';
 import ImageInput1 from '../../component/ImageInput1';
-
+import styles from './styles'
 
 const validationSchema = yup.object().shape({
     name: yup.string().required().min(3).label("Name"),
@@ -40,7 +40,7 @@ function LoginScreen(props) {
                        imageUri={imageUri}
                        onChangeImage={(uri)=>setImageUri(uri)}
                        />
-                       <Text style={{fontSize:18,fontWeight:'500'}}>upload picture</Text>
+                       <Text style={{fontSize:18,color:'grey'}}>upload picture</Text>
 
 
                         <AppFormFill
