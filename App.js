@@ -25,12 +25,16 @@ export default function App() {
   
 //<Details/>
 //  /<MapScreen/> 
-<FoodListUpload/>
+//{/* <FoodListUpload/> */}
+<View style={styles.container}>
+
+<UserDetailpost/>
+</View>
 
 
   );
-}
 
+}
 const styles = StyleSheet.create({
   container: {
     marginTop:Platform.OS==='android' ? StatusBar.currentHeight : 0, 
