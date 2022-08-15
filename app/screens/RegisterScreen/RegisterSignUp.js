@@ -49,6 +49,25 @@ function RegisterSignUp(props) {
                         autocorrect={false}
                         keyboardType={'default'}
                     />
+                <AppFormFill
+                //
+                        name='phoneNumber'
+                        icon="phone"
+                        placeholder="Phone Number"
+                        autoCapitilize='none'
+                        autocorrect={false}
+                        keyboardType={'default'}
+                    />
+                <AppFormFill
+                //
+                        name='city'
+                        icon="city"
+                        placeholder="City"
+                        autoCapitilize='none'
+                        autocorrect={false}
+                        keyboardType={'default'}
+                    />
+
 
                     <AppFormFill
                         name='email'

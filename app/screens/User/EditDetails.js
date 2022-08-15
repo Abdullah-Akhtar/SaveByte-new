@@ -6,18 +6,17 @@ import * as yup from 'yup';
 import AppFormFill from '../../component/AppFormFill';
 import SubmitButton from '../../component/SubmitButton';
 import ImageInput1 from '../../component/ImageInput1';
-import styles from '../foopost/styles';
 const validationSchema = yup.object().shape({
-    firstName: yup.string().required().min(3).label("First Name"),
-    lastName: yup.string().required().min(3).label("Last Name"),
-    phone: yup.string().required().min(11).max(11).label("Phone"),
-    email: yup.string().required().email().label("email"),
-    country: yup.string().required().min(3).max(15).label("Country"),
-    city: yup.string().min(3).max(15).required().label("City"),
+    // firstName: yup.string().required().min(3).label("First Name"),
+    // lastName: yup.string().required().min(3).label("Last Name"),
+    // phone: yup.string().required().min(11).max(11).label("Phone"),
+    // email: yup.string().required().email().label("email"),
+    // country: yup.string().required().min(3).max(15).label("Country"),
+    // city: yup.string().min(3).max(15).required().label("City"),
     
 })
 
-function UserDetailPost(props) {
+function EditDetails(props) {
     const [imageUri,setImageUri]=useState();
     
     return (
@@ -29,10 +28,10 @@ function UserDetailPost(props) {
             </View>
 
             <View style={styles.logocontainer}>
-                <Text style={{ paddingTop: 37,  fontWeight: 'bold', fontSize: 25 }}>Profile Details </Text>
+                <Text style={{ paddingTop: 50,  fontWeight: 'bold', fontSize: 25 }}>Edit Details </Text>
             </View>
             <Formik
-                initialValues={{ firstName: ' ', lastName: ' ',phone:' ',email:' ',country:' ',city:' ' }}
+                //initialValues={{ firstName: ' ', lastName: ' ',phone:' ',email:' ',country:' ',city:' ' }}
                 onSubmit={values => console.log(values)}
                 validationSchema={validationSchema}
             >
@@ -46,7 +45,7 @@ function UserDetailPost(props) {
                        <Text style={{fontSize:18,color:'grey'}}>Profile Picture</Text>
 
 
-                        <AppFormFill
+                        {/* <AppFormFill
                        //component that have basic functionlity of input fields
                        name='firstName'
                        icon="account-outline"
@@ -55,13 +54,13 @@ function UserDetailPost(props) {
                        autoCapitilize='none'
                        autocorrect={false}
                        keyboardType={'default'}
-                       />
+                       /> */}
 
                         <AppFormFill
                        //component that have basic functionlity of input fields
-                       name='lastName'
+                       name='fullName'
                        icon="account-outline"
-                       placeholder="Last Name"
+                       placeholder="Full Name"
                        autoCapitilize='none'
                        autocorrect={false}
                        secureTextEntry={false}
@@ -88,7 +87,7 @@ function UserDetailPost(props) {
                             secureTextEntry={false}
                             keyboardType={'email-address'}
                         />
-                        <AppFormFill
+                        {/* <AppFormFill
                             //component that have basic functionlity of input fields
                             name='country'
                             icon="earth"
@@ -97,7 +96,7 @@ function UserDetailPost(props) {
                             autocorrect={false}
                             secureTextEntry={false}
                             keyboardType={'default'}
-                        />
+                        /> */}
                         <AppFormFill
                             //component that have basic functionlity of input fields
                             name='city'
@@ -110,7 +109,7 @@ function UserDetailPost(props) {
                         />
                         <SubmitButton 
                         //component
-                        title={'Post'} />
+                        title={'Save Changes'} />
 
                     </>
                 )
@@ -120,5 +119,50 @@ function UserDetailPost(props) {
         
     );
 }
+const styles = StyleSheet.create({
+    container: {
+        //paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+        paddingTop:Platform.OS=== 'android' ? StatusBar.currentHeight:0,
+        flex: 1,
+        backgroundColor: '#FDF6F6',
+        alignItems: 'center',
+        position: 'relative',
+        marginTop:Platform.OS === 'android' ? StatusBar.currentHeight:0
+    },
+    
+    // img: {
 
-export default UserDetailPost;
+    //     marginTop: 20,
+    //     marginBottom: 20
+
+    // },
+    logocontainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingTop:0,
+        marginTop:0
+
+    },
+    
+    inputcontainer: {
+        flex: 1,
+        alignItems: 'center'
+
+    },
+    input: {
+        borderWidth: 1,
+        borderColor: 'black',
+        width: 329,
+        marginVertical: 8,
+        padding: 10,
+        borderRadius: 10,
+        backgroundColor: 'white'
+    }, btncontainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 0
+
+    },
+})
+export default EditDetails;

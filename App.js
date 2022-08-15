@@ -8,9 +8,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import CharityDetails from './app/screens/Charityanddetails/CharityDetails';
 import FoodListUpload from './app/screens/foopost/FoodListUpload'
-
+import UserDetails from './app/screens/User/UserDetails';
 import MapScreen from './app/screens/Location/MapScreen';
-import UserDetailpost from './app/screens/UserDetailPost/UserDetailpost';
+import EditDetails from './app/screens/User/EditDetails';
 // import CharityDetails from './app/screens/Charityanddetails/CharityDetails'
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -26,20 +26,19 @@ export default function App() {
 //<Details/>
 //  /<MapScreen/> 
 //{/* <FoodListUpload/> */}
-<View style={styles.container}>
-
-<UserDetailpost/>
-</View>
-
+// {/* <UserDetailpost/> */}
+ <UserDetails/> 
+//  <EditDetails/> 
+//<RegisterSignUp/>
 
   );
 
 }
 const styles = StyleSheet.create({
   container: {
-    marginTop:Platform.OS==='android' ? StatusBar.currentHeight : 0, 
+    paddingTop:Platform.OS==='android' ? StatusBar.currentHeight : 0, 
     flex: 1,
-    backgroundColor: '#fff',
-    paddingTop:50,    
+    //backgroundColor: '#fff',
+    //paddingTop:50,    
   },
 });
