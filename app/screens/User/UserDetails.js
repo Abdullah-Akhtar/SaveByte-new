@@ -1,4 +1,4 @@
-import { StyleSheet, View,StatusBar,FlatList } from 'react-native'
+import { StyleSheet, View,StatusBar,FlatList, Pressable } from 'react-native'
 import React from 'react'
 import { Avatar, Title, Caption, Text, TouchableRipple } from 'react-native-paper';
 import styles from './styles'
@@ -27,6 +27,20 @@ export default function UserDetails() {
         showsHorizontalScrollIndicator={false}
         renderItem={renderData}
         keyExtractor={item => item.id}
+        ListHeaderComponent={() => (
+          <TouchableRipple  onPress={()=>{}}>
+            <View style={{flexDirection:'row-reverse',padding:18,}}>
+              <Text style={{fontSize:20,fontWeight:'bold',}}>Logout</Text>
+              <Icon name='logout' color={'#FF6347'} size={30}/>
+            </View>
+          </TouchableRipple>
+  
+          // <Text
+          //   style={{color: 'black',fontSize: 25, alignSelf: 'center',marginTop:5,marginBottom: 5,fontWeight: '600',  }}>
+          //   Logout
+          // </Text>
+          
+        )}
         ListFooterComponent={<View />}
       />
     );
@@ -90,23 +104,14 @@ export default function UserDetails() {
               <AntDesign name="setting" size={30} color={'#FF6347'} />
               <Text style={styles.menuItemText}>Setting</Text>
             </View>
-          </TouchableRipple>
-  
-  
-  
-  
+          </TouchableRipple>  
         </View>
-  
-  
-  
-  
-  
   
       </View>
     );
     };
   return (
-    <View style={{backgroundColor: '#FDF6F6', flex: 1}}>
+    <View style={{backgroundColor: '#FDF6F6', flex: 1,position:'relative'}}>
       <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
       {listData()}
     </View>
