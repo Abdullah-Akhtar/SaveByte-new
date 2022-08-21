@@ -12,6 +12,8 @@ import UserDetails from './app/screens/User/UserDetails';
 import MapScreen from './app/screens/Location/MapScreen';
 import EditDetails from './app/screens/User/EditDetails';
 // import CharityDetails from './app/screens/Charityanddetails/CharityDetails'
+import Amount from './app/screens/Amount/Amount';
+import FoodDetail from './app/screens/FoodDEetail/FoodDetail';
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
@@ -27,10 +29,15 @@ export default function App() {
 //  /<MapScreen/> 
 //{/* <FoodListUpload/> */}
 // {/* <UserDetailpost/> */}
- <UserDetails/> 
+//  <UserDetails/> 
 //  <EditDetails/> 
 //<RegisterSignUp/>
+//<FoodList/>
+<View style={styles.container} >
 
+{/* <FoodDetail/> */}
+<Amount/>
+</View>
   );
 
 }
